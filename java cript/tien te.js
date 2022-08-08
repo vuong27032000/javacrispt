@@ -1,7 +1,21 @@
-VND = prompt("VND");
-USD = prompt("USD");
-let a = parent(VND);
-let b = parent(USD);
-let Result= 23000a = 1b;
-let 1a = 1b/23000;
-document.write()
+function ChangeMoney() {
+    let Amount = document.getElementById("Amount").value;
+    let FromC = document.getElementById("From").value;
+    let To = document.getElementById("To").value;
+    let Result;
+
+
+    if (FromC == "USD" && To == "VND") {
+        Result = "Result: " + (Amount * 23000) + " Đ";
+    }
+    else if (FromC == "VND"&& To =="USD"){
+        Result = "Result: "+ (Amount / 23000) + " $";
+    }
+    else if (FromC == "VND") {
+        Result = "Result: " + Amount + " Đ"
+    } else {
+        Result = "Result: " + Amount + " $"
+    }
+
+    document.getElementById("Result").innerHTML = Result;
+}
